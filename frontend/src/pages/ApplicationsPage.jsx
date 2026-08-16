@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { ApplicationFilters } from "../components/applications/ApplicationFilters";
 import { ApplicationCard } from "../components/applications/ApplicationCard";
 import { ApplicationTable } from "../components/applications/ApplicationTable";
@@ -17,7 +17,7 @@ const debounce = (func, delay = 300) => {
 };
 
 export function ApplicationsPage() {
-  const navigate = useNavigate();
+//   const navigate = useNavigate();
   const [applications, setApplications] = useState([]);
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
