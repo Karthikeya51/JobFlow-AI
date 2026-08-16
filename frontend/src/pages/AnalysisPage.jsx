@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { Navbar } from "../components/common/Navbar";
 import { MatchScoreCard } from "../components/analysis/MatchScoreCard";
 import applicationService from "../services/applicationService";
@@ -7,7 +7,6 @@ import analysisService from "../services/analysisService";
 
 export function AnalysisPage() {
   const { applicationId } = useParams();
-  const navigate = useNavigate();
   const [application, setApplication] = useState(null);
   const [analysis, setAnalysis] = useState({
     job_analysis: null,
